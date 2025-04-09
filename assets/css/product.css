@@ -1,0 +1,107 @@
+#product h2 {
+  font-size: 2.5rem;
+  color: #333;
+}
+
+#product .card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s ease-in-out;
+}
+
+.slider-wrapper {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.slider-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.slider-card {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 90%;
+  max-width: 400px;
+  /* optional max width */
+}
+
+@media (min-width: 768px) {
+  .slider-card {
+    width: 60%;
+    /* lebih besar di tablet */
+  }
+}
+
+@media (min-width: 992px) {
+  .slider-card {
+    width: 48%;
+    /* lebih besar di desktop */
+  }
+}
+
+@media (min-width: 1200px) {
+  .slider-card {
+    width: 45%;
+    /* bisa ubah sesuai kebutuhan */
+  }
+}
+
+.card-img-left {
+  position: relative;
+  width: 40%;
+}
+
+.card-img-left::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+  /* Ini yang bikin rasio 1:1 */
+}
+
+.card-img-left>div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+}
+/* Ubah warna semua tombol outline-success menjadi #A08F32 */
+.btn-outline-success {
+  color: #A08F32;
+  border-color: #A08F32;
+}
+
+.btn-outline-success:hover {
+  background-color: #A08F32;
+  color: white;
+}
+
+/* Ubah warna tombol outline-warning (Check Availability) juga jadi #A08F32 */
+.btn-outline-warning {
+  color: #A08F32;
+  border-color: #A08F32;
+}
+
+.btn-outline-warning:hover {
+  background-color: #A08F32;
+  color: white;
+}
+.btn-outline-success,
+.btn-outline-warning {
+  transition: all 0.3s ease;
+}
+
+
+.card:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease; /* Durasi dan timing function */
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+

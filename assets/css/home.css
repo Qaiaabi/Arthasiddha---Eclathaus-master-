@@ -1,0 +1,141 @@
+
+@font-face {
+    font-family: 'sojorun';
+    src: url('../font/Sojourn.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: #f8f9fa;
+    font-family: 'sojorun', sans-serif;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-link {
+    color: #BDBD0D !important;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-link:hover {
+    color: #9c9c0b !important;
+    text-decoration: underline;
+  }
+
+  .nav-link.active {
+    color: #BDBD0D !important;
+    border-bottom: 2px solid #BDBD0D;
+  }
+
+  .dropdown-menu {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .dropdown-item {
+    color: #BDBD0D;
+    transition: background 0.3s ease;
+  }
+
+  .dropdown-item:hover {
+    background-color: #f1f1f1;
+    color: #9c9c0b;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+
+  .video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 95vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.11);
+    z-index: 0;
+  }
+
+  .hero-section {
+    height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #fff;
+    padding: 2rem;
+  }
+
+  .hero-title {
+    font-family: 'sojorun', serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #eeee29;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-top: 1rem;
+  }
+
+  .custom-btn {
+    background-color: #BDBD0D;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+  }
+
+  .custom-btn:hover {
+    background-color: #9c9c0b;
+    color: #fff;
+  }
+
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  }
